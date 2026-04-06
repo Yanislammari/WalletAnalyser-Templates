@@ -1,0 +1,40 @@
+name: Deploy Email Templates to Azure Blob
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Sync HTML templates to Blob Storage
+        run: |
+          STORAGE_ACCOUNT_NAME="walletanalyserstorage"
+          CONTAINER_NAME="templates"
+          SOURCE_DIR="./mails"
+
+          az storage container create \
+            --name $CONTAINER_NAME \
+            --account-name $STORAGE_ACCOUNT_NAME \
+            --public-access off || true
+
+          az storage blob sync \
+            --account-name $STORAGE_ACCOUNT_NAME \
+            --container $CONTAINER_NAME \
+            --source $SOURCE_DIR \
+            --delete-destination true
