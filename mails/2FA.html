@@ -1,0 +1,73 @@
+<body style="margin:0; padding:0; background:#f5f4fa; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1f1f28;">
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width:600px; margin:auto;">
+    <tr>
+      <td style="padding:50px 20px 20px 20px; text-align:center;">
+        <h1 style="margin:0; font-size:28px; font-weight:700; color:#1f1f28;">
+          Wallet<span style="color:#9B8AF7;">Analyser</span>
+        </h1>
+        <p style="color:rgba(31,31,40,0.7); font-size:15px; margin-top:10px;">
+          Your verification code
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:30px 20px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="
+          background: rgba(255,255,255,0.6);
+          border-radius:24px;
+          border:1px solid rgba(155,138,247,0.2);
+          backdrop-filter: blur(20px);
+          text-align:center;
+        ">
+          <tr>
+            <td style="padding:35px 25px;">
+              <p style="font-size:15px; color:#1f1f28; line-height:1.7; margin:0;">
+                Hi <strong>${userName}</strong>,<br/><br/>
+                Use the code below to complete your sign-in.<br/>
+                Do not share this code with anyone.<br/><br/>
+                This code expires in <strong>10 minutes</strong>.
+              </p>
+
+              <div style="
+                display:inline-block;
+                margin-top:30px;
+                background: linear-gradient(135deg, #8B5CF6, #4F46E5);
+                border-radius:16px;
+                padding:18px 36px;
+                box-shadow: 0 12px 25px rgba(139,92,246,0.3);
+              ">
+                <span style="
+                  font-size:36px;
+                  font-weight:700;
+                  color:white;
+                  letter-spacing:10px;
+                  font-family:'Courier New', monospace;
+                ">${otpCode}</span>
+              </div>
+
+              <p style="font-size:13px; color:rgba(31,31,40,0.5); margin-top:20px; margin-bottom:0;">
+                Requested from <strong style="color:rgba(31,31,40,0.7);">${requestedAt}</strong>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:15px 20px; text-align:center;">
+        <p style="color:rgba(31,31,40,0.6); font-size:13px; line-height:1.6;">
+          If you did not attempt to sign in, your account may be at risk.<br/>
+          Please <a href="${secureAccountLink}" style="color:#9B8AF7; text-decoration:none;">secure your account</a> immediately.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:20px 20px 60px 20px; text-align:center; color:rgba(31,31,40,0.4); font-size:12px;">
+        <p style="margin:0;">© ${year} WalletAnalyser — All rights reserved</p>
+        <p style="margin-top:6px;">
+          <a href="${frontendUrl}" style="color:#9B8AF7; text-decoration:none;">Visit WalletAnalyser</a>
+        </p>
+      </td>
+    </tr>
+  </table>
+</body>
