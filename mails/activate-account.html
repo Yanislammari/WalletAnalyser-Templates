@@ -1,0 +1,70 @@
+<body style="margin:0; padding:0; background:#f5f4fa; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1f1f28;">
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width:600px; margin:auto;">
+    <tr>
+      <td style="padding:50px 20px 20px 20px; text-align:center;">
+        <h1 style="margin:0; font-size:28px; font-weight:700; color:#1f1f28;">
+          Wallet<span style="color:#9B8AF7;">Analyser</span>
+        </h1>
+        <p style="color:rgba(31,31,40,0.7); font-size:15px; margin-top:10px;">
+          Activate your account
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:30px 20px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="
+          background: rgba(255,255,255,0.6);
+          border-radius:24px;
+          border:1px solid rgba(155,138,247,0.2);
+          backdrop-filter: blur(20px);
+          text-align:center;
+        ">
+          <tr>
+            <td style="padding:35px 25px;">
+              <p style="font-size:15px; color:#1f1f28; line-height:1.7; margin:0;">
+                Hi <strong>${userName}</strong>,<br/><br/>
+                Welcome to WalletAnalyser.<br/>
+                Click the button below to activate your account and start using the platform.<br/><br/>
+                This activation link expires in <strong>24 hours</strong>.
+              </p>
+              <a href="${activationLink}" style="
+                display:inline-block;
+                margin-top:30px;
+                background: linear-gradient(135deg, #8B5CF6, #4F46E5);
+                color:white;
+                text-decoration:none;
+                padding:14px 28px;
+                border-radius:16px;
+                font-weight:600;
+                font-size:15px;
+                box-shadow: 0 12px 25px rgba(139,92,246,0.3);
+              ">
+                Activate Account
+              </a>
+              <p style="font-size:13px; color:rgba(31,31,40,0.5); line-height:1.6; margin-top:22px; margin-bottom:0;">
+                If the button does not work, copy and paste this link into your browser:<br/>
+                <a href="${activationLink}" style="color:#9B8AF7; text-decoration:none; word-break:break-all;">${activationLink}</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:15px 20px; text-align:center;">
+        <p style="color:rgba(31,31,40,0.6); font-size:13px; line-height:1.6;">
+          If you did not create this account, you can safely ignore this email.<br/>
+          For security reasons, do not share this link with anyone.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:20px 20px 60px 20px; text-align:center; color:rgba(31,31,40,0.4); font-size:12px;">
+        <p style="margin:0;">© ${year} WalletAnalyser — All rights reserved</p>
+        <p style="margin-top:6px;">
+          <a href="${frontendUrl}" style="color:#9B8AF7; text-decoration:none;">Visit WalletAnalyser</a>
+        </p>
+      </td>
+    </tr>
+  </table>
+</body>
